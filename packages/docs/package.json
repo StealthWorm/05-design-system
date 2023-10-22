@@ -14,6 +14,9 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@ignite-ui/react": "*",
+    "@ignite-ui/tokens": "*",
+    "@ignite-ui/eslint-config": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

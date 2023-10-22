@@ -9,6 +9,10 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    // define o tema dark do canvas (onde o componente aparece)
+    backgrounds: {
+      default: 'dark'
+    },
   },
 };
 
