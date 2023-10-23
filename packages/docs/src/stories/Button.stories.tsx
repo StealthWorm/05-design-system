@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Button, ButtonProps } from '@ignite-ui/react'
 
+// para componentes é melhor usar typescript ao inves de markdown, por causa do intelisense
 export default {
-  title: 'Button', // titulo da pagina do story
+  title: 'Form/Button', // titulo da pagina do story
   component: Button, // componente vinculado
 
   args: {

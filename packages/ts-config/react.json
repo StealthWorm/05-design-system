@@ -4,6 +4,8 @@
     "jsx": "react-jsx",
     "lib": ["dom", "ES2015"],
     "module": "ESNext",
+    "allowImportingTsExtensions": true,
     "target": "es6"
+    
   }
 }

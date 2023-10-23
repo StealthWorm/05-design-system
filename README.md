@@ -44,3 +44,44 @@ o comando acima define um documento de storybook, informando que utilizaremos um
 
 - definimos o type como react, informando que estamos criando para um projeto react
 - o ultimo ponto indica que vai usar o npm
+
+- aplicamos o conceito de **"monorepo"** (repositórios em um mesmo memso local de trabalho ou pasta) para uma abordagem onde varios projetos são dependentes entre si. Por exemplo, criamos um projeto com as configurações do ts-config, com o qual podemos reaproveitar suas caracteristicas em diferentes projetos sem precisar reconfigurar manualmente. Colocando ambos os projetos dentro do mesmo diretorio, evitamos a necessidade de termos de publicar um pacote especifico no NPM e posteriormente ter que baixa-lo novamente em cada modificação que fizermos.
+- criamos um pakage global que define os workspaces dos projetos que utilizaremos
+- dessa forma as dependencias comuns para todos os pacotes podem ser gerenciadas em um arquivo apenas, sem precisar intalar novamente em cada pacote.
+
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
+
+"main": "./dist/index.js", --> define qual o arquivo principal do pacote
+"module": "./dist/index.mjs", --> define qual o arquivo principal quando usamos ECMAScript Modules
+"types": "./dist/index.d.ts", --> usado apenas pelo TP para definir as tipagens do projeto
+
+# Turbo lib
+
+- npm i turbo@latest -D
+- serve para quando utilizamos monorepo
+  - com ele conseguimos executar scripts em todos os pacotes ao mesmo tempo
+  - acelera o processo de build. Ao rodar o build da aplicação, guarda um cache da build no node_modules, detectando apenas arquivos modificados, de maneira incremental.
+
+{
+  "$schema": "<http://turborepo.org/schema.json>", // qualquer json pode ter um schema, que define como ele deverá se comportar, alem de puxar as propriedades esperadas
+  "pipeline": {   // cada pipeline é um procedimento para o turbo ficar observando
+    "dev": {
+      "cache": false   // para ambientes dev, não quermos manter dados em cache, afinal estamos em ambiente local
+    },
+    "build": {  
+      "outputs": [  // definimos os diretoris criados com a build de cada pacote
+        "dist/**",
+        "storybook-static/**"
+      ],
+      "dependsOn": [  // serve para indicar que, alguns projetos em build, dependem da build de outros projetos, e que deverá executar a build dos mesmos, somente quando a build da dependencia externa for finalizada
+        "^build"
+      ]
+    }
+  }
+
+- feito o build com o turbo, é possivel disponibilizar remotamente esse build (ver documentação)
