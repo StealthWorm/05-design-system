@@ -28,6 +28,7 @@
 # StoryBook
 
 - Storybooks permitem que até mesmo pessoas de fora da area tech compreendam o design system e como utiliza-lo
+- Para documentação de componentes front-end
 
 ```
   // o comando abaixo não funciona mais para versões mais recentes (v7) do storybook
