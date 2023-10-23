@@ -10,7 +10,9 @@
 - [ ] Avatar
 - [ ] Multistep
 
-"build": "tsup src/index.ts --format esm,cjs --dts --external react"
+# TSUP  
+
+- "build": "tsup src/index.ts --format esm,cjs --dts --external react"
 
 - tsup é uma ferramenta que permite que seu codigo seja executado em diferentes ambientes, seja utilizando ECMAscript Modules ou Common JS para ambientes mais antigos (usando require).
 - Usando o TSC do typescript estaremos limitando quem pode consumir nossos pacotes.
@@ -22,6 +24,8 @@
 - "cjs" = Common JS
 - "dts" = exporta os arquivos d edefinição de tipagem
 - "--external react" = informa o tsup que, ao fazer o build, não precisa se preocupar com a intalação do react, pois ela vai importar externamente, da aplicação que vai usá-lo de fato.
+
+# StoryBook
 
 - Storybooks permitem que até mesmo pessoas de fora da area tech compreendam o design system e como utiliza-lo
 
@@ -40,10 +44,12 @@
 7. Acesse o arquivo packages/docs/package.json e edite os comandos de build para que o npm run build execute o build do Storybook, não do Vite. Exemplo:
 ```
 
-o comando acima define um documento de storybook, informando que utilizaremos uma versão do vite, pois é mais rapido, ja que utiliza esbuild.
+- o comando acima define um documento de storybook, informando que utilizaremos uma versão do vite, pois é mais rapido, ja que utiliza esbuild.
 
 - definimos o type como react, informando que estamos criando para um projeto react
 - o ultimo ponto indica que vai usar o npm
+
+# Monorepo
 
 - aplicamos o conceito de **"monorepo"** (repositórios em um mesmo memso local de trabalho ou pasta) para uma abordagem onde varios projetos são dependentes entre si. Por exemplo, criamos um projeto com as configurações do ts-config, com o qual podemos reaproveitar suas caracteristicas em diferentes projetos sem precisar reconfigurar manualmente. Colocando ambos os projetos dentro do mesmo diretorio, evitamos a necessidade de termos de publicar um pacote especifico no NPM e posteriormente ter que baixa-lo novamente em cada modificação que fizermos.
 - criamos um pakage global que define os workspaces dos projetos que utilizaremos
