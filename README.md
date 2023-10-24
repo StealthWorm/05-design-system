@@ -52,7 +52,7 @@
 
 # Monorepo
 
-- aplicamos o conceito de **"monorepo"** (repositórios em um mesmo memso local de trabalho ou pasta) para uma abordagem onde varios projetos são dependentes entre si. Por exemplo, criamos um projeto com as configurações do ts-config, com o qual podemos reaproveitar suas caracteristicas em diferentes projetos sem precisar reconfigurar manualmente. Colocando ambos os projetos dentro do mesmo diretorio, evitamos a necessidade de termos de publicar um pacote especifico no NPM e posteriormente ter que baixa-lo novamente em cada modificação que fizermos.
+- aplicamos o conceito de **"monorepo"** (repositórios em um mesmo mesmo local de trabalho ou pasta) para uma abordagem onde varios projetos são dependentes entre si. Por exemplo, criamos um projeto com as configurações do ts-config, com o qual podemos reaproveitar suas caracteristicas em diferentes projetos sem precisar reconfigurar manualmente. Colocando ambos os projetos dentro do mesmo diretorio, evitamos a necessidade de termos de publicar um pacote especifico no NPM e posteriormente ter que baixa-lo novamente em cada modificação que fizermos.
 - criamos um pakage global que define os workspaces dos projetos que utilizaremos
 - dessa forma as dependencias comuns para todos os pacotes podem ser gerenciadas em um arquivo apenas, sem precisar intalar novamente em cada pacote.
 

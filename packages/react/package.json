@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs", 
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
@@ -24,6 +24,8 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@stitches/react": "^1.2.8"
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@stitches/react": "^1.2.8",
+    "phosphor-react": "^1.4.1"
   }
 }
