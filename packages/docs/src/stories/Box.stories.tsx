@@ -5,11 +5,8 @@ export default {
   title: 'Surfaces/Box',
   component: Box,
   args: {
-    children: (
-      <>
-        <Text>Testando o elemento Box</Text>
-      </>
-    ),
+    // children como jsx
+    children: <Text>Testando o elemento Box</Text>,
   },
 } as Meta<BoxProps>
 
