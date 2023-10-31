@@ -33,3 +33,5 @@ export const Text = styled('p', {
 export interface TextProps extends ComponentProps<typeof Text> {
   as?: ElementType // o "as" é uma prop do stitches que permiter mudar o tipo do elemento
 }
+
+Text.displayName = 'Text'

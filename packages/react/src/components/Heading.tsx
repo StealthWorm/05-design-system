@@ -28,3 +28,5 @@ export const Heading = styled('h2', {
 export interface HeadingProps extends ComponentProps<typeof Heading> {
   as?: ElementType // o "as" é uma prop do stitches que permiter mudar o tipo do elemento
 }
+
+Heading.displayName = 'Heading'

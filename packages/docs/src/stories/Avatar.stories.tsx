@@ -8,6 +8,13 @@ export default {
     src: 'https://github.com/StealthWorm.png',
     alt: 'Thierry Pitela Santos',
   },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}

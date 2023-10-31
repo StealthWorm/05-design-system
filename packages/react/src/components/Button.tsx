@@ -46,6 +46,7 @@ export const Button = styled('button', {
       secondary: {
         color: '$ignite300',
         border: '2px solid $ignite500',
+        background: 'transparent',
 
         '&:not(:disabled):hover': {
           background: '$ignite500',
@@ -94,3 +95,5 @@ export interface ButtonProps extends ComponentProps<typeof Button> {
 
 // * exportamos as props do componente para que possamos acessar no storybook sem ter que ficar adivinhando as mesmas
 // export type ButtonProps = Stitches.VariantProps<typeof Button>
+
+Button.displayName = 'Button'

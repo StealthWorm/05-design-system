@@ -6,7 +6,7 @@ export type CheckboxProps = ComponentProps<typeof CheckboxContainer>
 
 export function Checkbox(props: CheckboxProps) {
   return (
-    <CheckboxContainer {...props}>
+    <CheckboxContainer {...props} aria-label="checkbox">
       {/* o "asChild" passa as props do pai para o elemento filho, evitando a criação de uma nova div envolvendo o filho */}
       <CheckboxIndicator asChild>
         <Check weight="bold" />
@@ -14,3 +14,5 @@ export function Checkbox(props: CheckboxProps) {
     </CheckboxContainer>
   )
 }
+
+Checkbox.displayName = 'Checkbox'
