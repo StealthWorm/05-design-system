@@ -1,5 +1,5 @@
 {
-  "name": "@ignite-ui/docs",
+  "name": "@ui-design-sys/docs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,10 +15,10 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/react": "*",
-    "@ignite-ui/tokens": "*",
-    "@ignite-ui/ts-config": "*",
+    "@ui-design-sys/eslint-config": "*",
+    "@ui-design-sys/react": "*",
+    "@ui-design-sys/tokens": "*",
+    "@ui-design-sys/ts-config": "*",
     "@storybook/addon-a11y": "^7.5.2",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
