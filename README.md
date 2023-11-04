@@ -99,3 +99,6 @@
 - "npm run changeset": "changeset": roda o change-set dos pacotes escolhidos para automaticamente mudar a versão dos mesmos no package.json
 "version-packages": "changeset version": nos permite ver as versões, além de atualizar a versão dos arquivos marcados como modificados no comando anterior.
 - (--filter=packages/docs): filtra esse pacote, pois não queremos mandar ele para o npm
+
+1 - npm run changeset > verificar pacotes que mudaram
+2 - npm run version-packages > criar o log e atualiza a versão dos pacotes alterados
