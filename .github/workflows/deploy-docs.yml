@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
       #instalação de pacotes do npm, porem em ambiente de CI, sem mexer no package.lock
       - run: npm ci
 
