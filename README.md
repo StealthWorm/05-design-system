@@ -98,7 +98,7 @@
 - mudamos o nome dos pacotes do modelo "ignite-ui/*" para o novo pois, se quisermos publicar no npm, cada organização deve ser única. Logo o nome precisa ser mudado.
 - "npm run changeset": "changeset": roda o change-set dos pacotes escolhidos para automaticamente mudar a versão dos mesmos no package.json
 "version-packages": "changeset version": nos permite ver as versões, além de atualizar a versão dos arquivos marcados como modificados no comando anterior.
-- (--filter=packages/docs): filtra esse pacote, pois não queremos mandar ele para o npm
+- (--filter=packages/docs) (--filter=!docs): filtra esse pacote, pois não queremos mandar ele para o npm
 
-1 - npm run changeset > verificar pacotes que mudaram
+1 - npm run changeset > verificar pacotes que mudaram e criar um "bump" com o que esta pronto para ser atualizado
 2 - npm run version-packages > criar o log e atualiza a versão dos pacotes alterados

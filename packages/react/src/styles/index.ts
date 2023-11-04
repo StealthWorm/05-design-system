@@ -19,9 +19,10 @@ export const {
   createTheme,
   config,
 } = createStitches({
-  // uma forma de mapear props css para algum tipo de token
-  // sobrescreve o defaultTheme definido no stitches (por exemplo o que foi definido nos tokens de space seria sobrescritos)
-  // para evitar isso, basta mapear o defaultThemeMap dentro do themeMap, para ele enteder que deve puxar o que ja foi definido somado às novas props
+  /* themeMap é uma forma de mapear props css para algum tipo de token
+     sobrescreve o defaultTheme definido no stitches (por exemplo, o que foi definido nos tokens de space seria sobrescrito)
+   para evitar isso, basta mapear o "defaultThemeMap" dentro do themeMap, para ele entender que deve puxar o que ja foi definido somado às novas props
+  */
   themeMap: {
     ...defaultThemeMap,
     height: 'space',
