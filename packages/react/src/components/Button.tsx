@@ -29,6 +29,7 @@ export const Button = styled('button', {
   },
 
   '&:focus': {
+    //  $colors$gray100 é um hack para ele interpretar as variaveis do stitches como cores
     boxShadow: '0 0 0 2px $colors$gray100',
   },
 
