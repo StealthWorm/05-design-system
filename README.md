@@ -50,6 +50,15 @@
 - definimos o type como react, informando que estamos criando para um projeto react
 - o ultimo ponto indica que vai usar o npm
 
+## storybook-deployer
+
+- biblioteca para publicação do storybook. Baixamos na documentação e não na raiz do monorepo
+- permite publicar no github pages ou no bucket S3 da AWS
+- "deploy-storybook": "storybook-to-ghpages". Ao executar, ele cria um branch no repositorio criado no github
+  - É preciso definir esse branch na aba de "pages" do repositorio, para direcionar o acesso  
+- no github, caso o workflow execute com sucesso mas tenha erro nas páginas do site como "Failed to fetch dynamically imported module", provavelmente você terá que usar essa solução de desabilitar o jekyll:
+  - no arquivo "deploy-docs.yml", foi adpatado um comando para criar o arquivo ".nojekyll" ao rodar o "run:" do Deploy storybook, que basicamente ignora a tratativa padrão que ignora arquivos que começam com underline "_". Assim, o workflow executa corretamente e podemos acessar as paginas do storybook.
+
 # Monorepo
 
 - aplicamos o conceito de **"monorepo"** (repositórios em um mesmo mesmo local de trabalho ou pasta) para uma abordagem onde varios projetos são dependentes entre si. Por exemplo, criamos um projeto com as configurações do ts-config, com o qual podemos reaproveitar suas caracteristicas em diferentes projetos sem precisar reconfigurar manualmente. Colocando ambos os projetos dentro do mesmo diretorio, evitamos a necessidade de termos de publicar um pacote especifico no NPM e posteriormente ter que baixa-lo novamente em cada modificação que fizermos.
