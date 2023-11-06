@@ -4,13 +4,13 @@ import { keyframes, styled } from '../../styles'
 export const ToastProvider = styled(Toast.Provider, {})
 
 export const ToastViewport = styled(Toast.Viewport, {
-  // position: 'absolute',
-  // bottom: '0',
-  // right: '0',
   display: 'flex',
-  width: 'max-content',
-  float: 'right',
-  alignItems: 'flex-end',
+  position: 'absolute',
+  justifyContent: 'center',
+  alignItems: 'center',
+  bottom: '$8',
+  right: '$8',
+  overflow: 'hidden',
 })
 
 const slideIn = keyframes({
@@ -34,7 +34,6 @@ const slideOut = keyframes({
 export const ToastContainer = styled(Toast.Root, {
   display: 'grid',
   gridTemplateColumns: 'auto max-content',
-  position: 'relative',
   width: '100%',
   borderRadius: '$sm',
   border: '1px solid $gray600',
@@ -44,13 +43,16 @@ export const ToastContainer = styled(Toast.Root, {
   alignItems: 'flex-start',
   justifyContent: 'space-between',
   gap: '$8',
+  maxWidth: '360px',
+  lineBreak: 'auto',
+  overflowWrap: 'break-all',
 
   '&[data-state="open"]': {
-    animation: `${slideIn} 200ms ease-out`,
+    animation: `${slideIn} 200ms ease-in-out`,
   },
 
   '&[data-state="closed"]': {
-    animation: `${slideOut} 200ms ease-out`,
+    animation: `${slideOut} 200ms ease-in-out`,
   },
 })
 

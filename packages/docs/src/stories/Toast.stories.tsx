@@ -16,9 +16,3 @@ export const Primary: StoryObj<ToastProps> = {
     open: true,
   },
 }
-
-export const Closed: StoryObj<ToastProps> = {
-  args: {
-    open: false,
-  },
-}

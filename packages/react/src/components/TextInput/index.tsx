@@ -6,7 +6,7 @@ export interface TextInputProps extends ComponentProps<typeof Input> {
   containerProps?: ComponentProps<typeof TextInputContainer>
 }
 
-// "ref" é uma maneira do react acessar a referencia do elemnto na DOM (arvore de elementos), permitindo usar metodos como focus direto no input
+// "ref" é uma maneira do react acessar a referencia do elemento na DOM (arvore de elementos), permitindo usar metodos como focus direto no input
 // "ElementRef" extrai a tipagem de um outro componente
 export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
   ({ prefix, containerProps, ...props }: TextInputProps, ref) => {
