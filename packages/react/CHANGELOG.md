@@ -1,5 +1,11 @@
 # @ui-design-sys/react
 
+## 2.0.2
+
+### Patch Changes
+
+- Created new components for Toast and Tooltip
+
 ## 2.0.1
 
 ### Patch Changes
