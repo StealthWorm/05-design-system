@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Button, ButtonProps } from '@ui-design-sys/react'
 import { ArrowRight } from 'phosphor-react'
 
-{
-  /* para componentes é melhor usar typescript (.tsx) ao inves de markdown, por causa do intelisense */
-}
+/* 
+  para componentes é melhor usar typescript (.tsx) ao inves de markdown, por causa do intelisense 
+*/
 export default {
   title: 'Form/Button',
   component: Button,
