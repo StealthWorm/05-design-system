@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
       #instalação de pacotes do npm, porem em ambiente de CI, sem mexer no package.lock
@@ -32,4 +32,3 @@ jobs:
         run: touch storybook-static/.nojekyll && npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
-            
